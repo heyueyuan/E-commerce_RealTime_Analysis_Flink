@@ -18,7 +18,7 @@ object KafkaProducerUtil {
 
     val producer = new KafkaProducer[String, String](properties)
 
-    val bufferedSource = io.Source.fromFile("/Users/mark/E-commerce_RealTime_Analysis_Flink/HotItemsAnalysis/src/main/resources/UserBehavior.csv")
+    val bufferedSource = io.Source.fromFile("HotItemsAnalysis/src/main/resources/UserBehavior.csv")
 
     for( line <- bufferedSource.getLines() ){
       val record = new ProducerRecord[String, String](topic, line)
