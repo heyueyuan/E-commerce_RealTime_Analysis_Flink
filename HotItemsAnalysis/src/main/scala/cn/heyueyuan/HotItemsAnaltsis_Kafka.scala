@@ -19,10 +19,10 @@ import org.apache.flink.util.Collector
 
 import scala.collection.mutable.ListBuffer
 
-case class UserBehavior(userId: Long, itemId: Long, categoryId: Int, behavior: String, timestamp: Long)
-case class ItemViewCount(itemId: Long, windowEnd: Long, count: Long)
+//case class UserBehavior(userId: Long, itemId: Long, categoryId: Int, behavior: String, timestamp: Long)
+//case class ItemViewCount(itemId: Long, windowEnd: Long, count: Long)
 
-object HotItemsAnaltsis {
+object HotItemsAnaltsis_Kafka {
   def main(args: Array[String]): Unit = {
 
     val env = StreamExecutionEnvironment.getExecutionEnvironment
